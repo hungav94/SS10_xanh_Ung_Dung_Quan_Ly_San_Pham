@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng thuật toán tìm kiếm</title>
+</head>
+<body>
+<script>
+    let arr = ['0123456789', '0123456788', '0123456787', '0123456786', '0123456785', '0323456784'];
+
+    function isNumPhone(num) {
+        regexp = /[0][389]{1}[0-9]{8}$/;
+        if (regexp.test(num)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        if (isNumPhone(arr[i]) == true) {
+            alert(arr[i] + ' là số điện thoại vt');
+            break;
+        } else {
+            alert(arr[i] + ' không phải là số vt');
+        }
+    }
+</script>
+</body>
+</html>
